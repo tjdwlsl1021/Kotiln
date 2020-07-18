@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.R
+import com.example.myapplication.customalertdialog.CustomAlertDialogMainActivity
 import com.example.myapplication.navigation.NaviMainActivity
 import com.example.myapplication.scratch.ScratchActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -18,6 +19,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         btn_navi.setOnClickListener(this)
         btn_scratch.setOnClickListener(this)
+        btn_dialog.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -28,6 +30,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.btn_scratch -> {
                 val intent = Intent(this, ScratchActivity::class.java)
+                startActivity(intent)
+            }
+
+            R.id.btn_dialog -> {
+                val intent = Intent(this, CustomAlertDialogMainActivity::class.java)
                 startActivity(intent)
             }
         }

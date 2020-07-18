@@ -5,5 +5,16 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="main_title">Let\'s find out\n your love type!</string>
     <string name="question">There were favorite flowers\nin the flower base.\nAs time goes, the flowers\nhave all withered.\nWhat are you going to do with that?</string>
+    <string name="success">SUCCESS</string>
+    <string name="warning">WARNING</string>
+    <string name="error">ERROR</string>
+    <string name="success_title">This is success title</string>
+    <string name="warning_title">This is warning title</string>
+    <string name="error_title">This is error title</string>
+    <string name="dummy_text">Lorem Ipsum is simply dummy text of the printing and type setting industry</string>
+    <string name="okay">Okay</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
 
 </resources>
