@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.grammar
 
 
 //class Human constructor(name : String) {

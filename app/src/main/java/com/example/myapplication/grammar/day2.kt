@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.grammar
 
 // 1. Lamda
 // 람다식은 우리가 마치 value처럼 다룰 수 있는 익명함수다

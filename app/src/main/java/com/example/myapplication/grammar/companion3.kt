@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.grammar
 
 
 // 자바 static처럼 사용
@@ -19,7 +19,10 @@ class Book private constructor(val id: Int, val name: String) {
 
         val myBook = "new book"
 
-        fun create() = Book(0, myBook)
+        fun create() = Book(
+            0,
+            myBook
+        )
 
     }
 
@@ -32,9 +35,10 @@ interface IdProvider {
 fun main() {
 //    val book = Book()
 //    val book = Book.Companion.create() // companion 생략가능, private 속성이나 메서드를 읽어올 수 있게 하는 역할, 자바의 static역할
-    val book = Book.create() // companion 생략가능, private 속성이나 메서드를 읽어올 수 있게 하는 역할, 자바의 static역할
+    val book =
+        Book.create() // companion 생략가능, private 속성이나 메서드를 읽어올 수 있게 하는 역할, 자바의 static역할
 
-    val bookId = Book.BookFactory.getId()
+    val bookId = Book.getId()
     println("${book.id} ${book.name}")
 
 

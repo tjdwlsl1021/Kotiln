@@ -1,15 +1,16 @@
-package com.example.myapplication
+package com.example.myapplication.grammar
 
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_main.*
+import com.example.myapplication.R
+import kotlinx.android.synthetic.main.activity_main2.*
 
-class MainActivity : AppCompatActivity() {
+class Main2Activity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main2)
 
         button.setOnClickListener(object : View.OnClickListener {
             override fun onClick(p0: View?) {

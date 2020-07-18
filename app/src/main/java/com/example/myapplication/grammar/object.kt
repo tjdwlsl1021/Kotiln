@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.grammar
 
 // CarFactory 객체는 딱 한번만 생성된다 - Singleton Pattern
 object CarFactory {
