@@ -1,4 +1,4 @@
-package com.example.myapplication.testapp.fragment
+package com.example.myapplication.navigation.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
