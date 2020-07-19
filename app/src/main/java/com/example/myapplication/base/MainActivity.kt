@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.R
+import com.example.myapplication.bottomsheetdialog.BottomSheetDialogActivity
 import com.example.myapplication.customalertdialog.CustomAlertDialogMainActivity
 import com.example.myapplication.navigation.NaviMainActivity
 import com.example.myapplication.scratch.ScratchActivity
@@ -20,6 +21,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btn_navi.setOnClickListener(this)
         btn_scratch.setOnClickListener(this)
         btn_dialog.setOnClickListener(this)
+        btn_bottom_dialog.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -37,6 +39,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 val intent = Intent(this, CustomAlertDialogMainActivity::class.java)
                 startActivity(intent)
             }
+            R.id.btn_bottom_dialog -> {
+                val intent = Intent(this, BottomSheetDialogActivity::class.java)
+                startActivity(intent)
+            }
+
         }
     }
 

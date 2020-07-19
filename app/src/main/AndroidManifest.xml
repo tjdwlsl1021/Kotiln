@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".customalertdialog.CustomAlertDialogMainActivity"></activity>
+        <activity android:name=".bottomsheetdialog.BottomSheetDialogActivity"></activity>
+        <activity android:name=".customalertdialog.CustomAlertDialogMainActivity" />
         <activity android:name=".base.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,7 +20,7 @@
         </activity>
         <activity android:name=".scratch.ScratchActivity" />
         <activity android:name=".grammar.Main2Activity" />
-        <activity android:name=".navigation.NaviMainActivity"></activity>
+        <activity android:name=".navigation.NaviMainActivity" />
     </application>
 
 </manifest>

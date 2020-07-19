@@ -102,9 +102,13 @@ class CustomAlertDialogMainActivity : AppCompatActivity(), View.OnClickListener 
             Toast.makeText(this, "Yes", Toast.LENGTH_SHORT).show()
         }
 
+        // 코틀린은 이렇게 안썼는데??
         if (alertDialog.window != null) {
             alertDialog.window!!.setBackgroundDrawable(ColorDrawable(0))
         }
+
+//        alertDialog.window?.setBackgroundDrawable(ColorDrawable(0))
+
         alertDialog.show()
     }
 

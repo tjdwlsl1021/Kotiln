@@ -15,6 +15,14 @@
     <string name="okay">Okay</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+    <string name="share_now">Share Now</string>
+    <string name="women_s_synthetic_lines_dress">Women\'s Synthetic Lines Dress</string>
+    <string name="free_delivery">Free Delivery</string>
+    <string name="u20b9_734">u20b9_734</string>
+    <string name="add_to_favorites">Add To Favorites</string>
+    <string name="share_product_via">Share Product Via...</string>
+    <string name="share">SHARE</string>
+    <string name="show_bottom_sheet_dialog">SHOW BOTTOM SHEET DIALOG</string>
 
 
 </resources>
