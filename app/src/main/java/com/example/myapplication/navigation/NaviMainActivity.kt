@@ -8,7 +8,7 @@ import com.example.myapplication.R
 import kotlinx.android.synthetic.main.activity_navi_main.*
 
 
-class NaviMainActivity : AppCompatActivity() {
+class NaviMainActivity : AppCompatActivity() { // 동영상 보고 따라치기 - navigation
 
     lateinit var navControllor: NavController // 지금 초기화 할게 아니라 나중에 초기화 할거라서 lateinit
 
