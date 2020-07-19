@@ -10,7 +10,7 @@ import com.example.myapplication.R
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import kotlinx.android.synthetic.main.activity_bottom_sheet_dialog.*
 
-class BottomSheetDialogActivity : AppCompatActivity() {
+class BottomSheetDialogActivity : AppCompatActivity() { // 동영상 보고 따라치기 - bottom_sheet_dialog
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
