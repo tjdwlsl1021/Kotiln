@@ -12,7 +12,6 @@ import com.example.myapplication.navigation.NaviMainActivity
 import com.example.myapplication.scratch.ScratchActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
-// 예제별 버튼만들어서 클릭하면 해당 페이지 이동
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,24 +27,31 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(v: View?) {
         when (v?.id) {
+            // 기능 - 네비게이션
             R.id.btn_navi -> {
                 val intent = Intent(this, NaviMainActivity::class.java)
                 startActivity(intent)
             }
+
+            // 기능 - 스크래치
             R.id.btn_scratch -> {
                 val intent = Intent(this, ScratchActivity::class.java)
                 startActivity(intent)
             }
 
+            // 기능 - 다이얼로그
             R.id.btn_dialog -> {
                 val intent = Intent(this, CustomAlertDialogMainActivity::class.java)
                 startActivity(intent)
             }
+
+            // 기능 - 하단 다이얼 로그
             R.id.btn_bottom_dialog -> {
                 val intent = Intent(this, BottomSheetDialogActivity::class.java)
                 startActivity(intent)
             }
 
+            // 구조 - MVVM
             R.id.btn_mvvm -> {
                 val intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)
