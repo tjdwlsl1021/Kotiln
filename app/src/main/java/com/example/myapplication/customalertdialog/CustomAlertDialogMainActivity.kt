@@ -14,7 +14,8 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.myapplication.R
 import kotlinx.android.synthetic.main.activity_custom_alert_dialog_main.*
 
-class CustomAlertDialogMainActivity : AppCompatActivity(), View.OnClickListener {
+class CustomAlertDialogMainActivity : AppCompatActivity(),
+    View.OnClickListener { // 동영상 보고 따라치기 - custom_alert_dialog_main
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
