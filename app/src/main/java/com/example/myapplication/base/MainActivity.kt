@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.R
 import com.example.myapplication.bottomsheetdialog.BottomSheetDialogActivity
 import com.example.myapplication.customalertdialog.CustomAlertDialogMainActivity
+import com.example.myapplication.mvvm.ui.auth.LoginActivity
 import com.example.myapplication.navigation.NaviMainActivity
 import com.example.myapplication.scratch.ScratchActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -22,6 +23,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btn_scratch.setOnClickListener(this)
         btn_dialog.setOnClickListener(this)
         btn_bottom_dialog.setOnClickListener(this)
+        btn_mvvm.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -41,6 +43,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.btn_bottom_dialog -> {
                 val intent = Intent(this, BottomSheetDialogActivity::class.java)
+                startActivity(intent)
+            }
+
+            R.id.btn_mvvm -> {
+                val intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)
             }
 
