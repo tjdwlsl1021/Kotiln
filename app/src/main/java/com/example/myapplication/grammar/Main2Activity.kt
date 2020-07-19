@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.R
 import kotlinx.android.synthetic.main.activity_main2.*
 
-class Main2Activity : AppCompatActivity() {
+class Main2Activity : AppCompatActivity() { // 동영상 보고 따라치기 - kotlin grammar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
