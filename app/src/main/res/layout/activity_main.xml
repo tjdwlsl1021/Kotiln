@@ -54,14 +54,4 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <Button
-        app:layout_constraintTop_toBottomOf="@+id/btn_navi"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        app:layout_constraintStart_toEndOf="@+id/btn_mvvm"
-        android:id="@+id/btn_dagger"
-        android:text="Dagger"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

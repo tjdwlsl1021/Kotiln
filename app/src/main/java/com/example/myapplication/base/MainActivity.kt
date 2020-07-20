@@ -57,12 +57,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 val intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)
             }
-            // 의존성 주입 - Dagger
-            R.id.btn_dagger -> {
-                val intent = Intent(this, LoginActivity::class.java)
-                startActivity(intent)
-            }
-
         }
     }
 
