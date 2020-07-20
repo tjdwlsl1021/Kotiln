@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btn_dialog.setOnClickListener(this)
         btn_bottom_dialog.setOnClickListener(this)
         btn_mvvm.setOnClickListener(this)
+        btn_dagger.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -53,6 +54,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
             // 구조 - MVVM
             R.id.btn_mvvm -> {
+                val intent = Intent(this, LoginActivity::class.java)
+                startActivity(intent)
+            }
+            // 의존성 주입 - Dagger
+            R.id.btn_dagger -> {
                 val intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)
             }
