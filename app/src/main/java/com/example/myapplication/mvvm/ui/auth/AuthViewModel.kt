@@ -6,11 +6,15 @@ import com.example.myapplication.mvvm.data.repositories.UserRepository
 import com.example.myapplication.mvvm.util.ApiException
 import com.example.myapplication.mvvm.util.Coroutines
 
-class AuthViewModel : ViewModel() {
+class AuthViewModel(
+    private val repository: UserRepository
+) : ViewModel() {
     var email: String? = null //  xml에서 viewModel. 붙인거랑 연결
     var password: String? = null
 
     var authListener: AuthListener? = null
+
+    fun getLoggedInUser() = repository.getUser()
 
     fun onLoginButtonClick(view: View) {
         authListener?.onStarted()
@@ -21,9 +25,10 @@ class AuthViewModel : ViewModel() {
 
         Coroutines.main {
             try {
-                val authResponse = UserRepository().userLogin(email!!, password!!)
+                val authResponse = repository.userLogin(email!!, password!!)
                 authResponse.user?.let {
                     authListener?.onSuccess(it)
+                    repository.saveUser(it)
                     return@main
                 }
                 authListener?.onFailure(authResponse.message!!)

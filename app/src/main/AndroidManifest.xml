@@ -13,7 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
-        <activity android:name=".dagger.DaggerActivity"></activity>
+        <activity android:name=".mvvm.ui.home.HomeActivity"></activity>
+        <activity android:name=".dagger.DaggerActivity" />
         <activity android:name=".mvvm.ui.auth.SignupActivity" />
         <activity android:name=".mvvm.ui.auth.LoginActivity" />
         <activity android:name=".bottomsheetdialog.BottomSheetDialogActivity" />
