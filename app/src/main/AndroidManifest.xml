@@ -12,6 +12,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:name=".mvvm.MVVMApplication"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
         <activity android:name=".mvvm.ui.home.HomeActivity"></activity>
