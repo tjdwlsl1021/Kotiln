@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.myapplication">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -14,7 +15,6 @@
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
         <activity android:name=".mvvm.ui.home.HomeActivity"></activity>
-        <activity android:name=".dagger.DaggerActivity" />
         <activity android:name=".mvvm.ui.auth.SignupActivity" />
         <activity android:name=".mvvm.ui.auth.LoginActivity" />
         <activity android:name=".bottomsheetdialog.BottomSheetDialogActivity" />

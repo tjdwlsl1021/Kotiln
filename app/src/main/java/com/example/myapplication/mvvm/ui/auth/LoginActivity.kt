@@ -11,6 +11,7 @@ import com.example.myapplication.databinding.ActivityLoginBinding
 import com.example.myapplication.mvvm.data.db.AppDatabase
 import com.example.myapplication.mvvm.data.db.entities.User
 import com.example.myapplication.mvvm.data.network.MyApi
+import com.example.myapplication.mvvm.data.network.NetworkConnetionInterceptor
 import com.example.myapplication.mvvm.data.repositories.UserRepository
 import com.example.myapplication.mvvm.ui.home.HomeActivity
 import com.example.myapplication.mvvm.util.hide
@@ -23,7 +24,8 @@ class LoginActivity : AppCompatActivity(), AuthListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val api = MyApi()
+        val networkConnetionInterceptor = NetworkConnetionInterceptor(this)
+        val api = MyApi(networkConnetionInterceptor)
         val db = AppDatabase(this)
         val repository = UserRepository(api, db)
         val factory = AuthViewModelFactory(repository)
