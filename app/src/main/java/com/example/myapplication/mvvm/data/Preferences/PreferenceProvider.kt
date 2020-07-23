@@ -2,7 +2,7 @@ package com.example.myapplication.mvvm.data.Preferences
 
 import android.content.Context
 import android.content.SharedPreferences
-import android.preference.PreferenceManager
+import androidx.preference.PreferenceManager
 
 
 private const val KEY_SAVED_AT = "ket_save_at"
