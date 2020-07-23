@@ -3,13 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-
-        <variable
-            name="viewmodel"
-            type="com.example.myapplication.mvvm.ui.auth.AuthViewModel" />
-    </data>
-
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -78,7 +71,6 @@
                     android:drawableLeft="@drawable/ic_name"
                     android:drawablePadding="16dp"
                     android:hint="Belal Khan"
-                    android:text="@={viewmodel.name}"
                     android:inputType="text"
                     android:padding="12dp" />
 
@@ -86,7 +78,6 @@
                     android:id="@+id/edit_text_email"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="@={viewmodel.email}"
                     android:layout_marginBottom="12dp"
                     android:background="@drawable/edit_text_round_gray_background"
                     android:drawableLeft="@drawable/ic_email"
@@ -100,7 +91,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginBottom="12dp"
-                    android:text="@={viewmodel.password}"
                     android:background="@drawable/edit_text_round_gray_background"
                     android:drawableLeft="@drawable/ic_lock"
                     android:drawablePadding="16dp"
@@ -113,7 +103,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginBottom="12dp"
-                    android:text="@={viewmodel.passwordconfirm}"
                     android:background="@drawable/edit_text_round_gray_background"
                     android:drawableLeft="@drawable/ic_lock"
                     android:drawablePadding="16dp"
@@ -136,7 +125,6 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:text="Sign Up"
-                    android:onClick="@{viewmodel::onSignupButtonClick}"
                     android:textAllCaps="false" />
 
             </LinearLayout>
@@ -148,7 +136,6 @@
                 android:layout_below="@id/linearLayout2"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="12dp"
-                android:onClick="@{viewmodel::onLogin}"
                 android:text="Already have an account?\nSign in Here"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
