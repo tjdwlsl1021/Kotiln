@@ -1,6 +1,7 @@
 package com.example.myapplication.mvvm
 
 import android.app.Application
+import com.example.myapplication.mvvm.data.Preferences.PreferenceProvider
 import com.example.myapplication.mvvm.data.db.AppDatabase
 import com.example.myapplication.mvvm.data.network.MyApi
 import com.example.myapplication.mvvm.data.network.NetworkConnetionInterceptor
@@ -26,8 +27,9 @@ class MVVMApplication : Application(), KodeinAware {
         bind() from singleton { NetworkConnetionInterceptor(instance()) }
         bind() from singleton { MyApi(instance()) }
         bind() from singleton { AppDatabase(instance()) }
+        bind() from singleton { PreferenceProvider(instance()) }
         bind() from singleton { UserRepository(instance(), instance()) }
-        bind() from singleton { QuotesRepository(instance(), instance()) }
+        bind() from singleton { QuotesRepository(instance(), instance(), instance()) }
         bind() from provider { AuthViewModelFactory(instance()) }
         bind() from provider { ProfileViewModelFactory(instance()) }
         bind() from provider { QuotesViewModelFactory(instance()) }
