@@ -9,6 +9,7 @@ import com.example.myapplication.bottomsheetdialog.BottomSheetDialogActivity
 import com.example.myapplication.customalertdialog.CustomAlertDialogMainActivity
 import com.example.myapplication.mvvm.ui.auth.LoginActivity
 import com.example.myapplication.navigation.NaviMainActivity
+import com.example.myapplication.qrcode.QRCodeActivity
 import com.example.myapplication.scratch.ScratchActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -23,6 +24,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btn_dialog.setOnClickListener(this)
         btn_bottom_dialog.setOnClickListener(this)
         btn_mvvm.setOnClickListener(this)
+        btn_qr_code.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -54,6 +56,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             // 구조 - MVVM
             R.id.btn_mvvm -> {
                 val intent = Intent(this, LoginActivity::class.java)
+                startActivity(intent)
+            }
+            // 구조 - MVVM
+            R.id.btn_qr_code -> {
+                val intent = Intent(this, QRCodeActivity::class.java)
                 startActivity(intent)
             }
         }

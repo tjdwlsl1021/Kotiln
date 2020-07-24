@@ -28,6 +28,15 @@ android {
         }
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
     dataBinding {
         enabled = true
     }
@@ -97,4 +106,6 @@ dependencies {
     api "com.google.dagger:dagger-android:$daggerVer"
     api "com.google.dagger:dagger-android-support:$daggerVer" // if you use the support libraries
     annotationProcessor "com.google.dagger:dagger-android-processor:$daggerVer"
+
+    implementation 'com.google.android.gms:play-services-vision:19.0.0'
 }
