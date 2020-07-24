@@ -16,13 +16,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
-        <activity android:name=".qrcode.QRCodeActivity"></activity>
+        <activity android:name=".appbar.AppBarActivity"></activity>
+        <activity android:name=".qrcode.QRCodeActivity" />
         <activity android:name=".mvvm.ui.home.HomeActivity" />
         <activity android:name=".mvvm.ui.auth.SignupActivity" />
         <activity android:name=".mvvm.ui.auth.LoginActivity" />
         <activity android:name=".bottomsheetdialog.BottomSheetDialogActivity" />
         <activity android:name=".customalertdialog.CustomAlertDialogMainActivity" />
-        <activity android:name=".base.MainActivity">
+        <activity android:name=".main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

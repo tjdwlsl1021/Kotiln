@@ -1,10 +1,11 @@
-package com.example.myapplication.base
+package com.example.myapplication.main
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.R
+import com.example.myapplication.appbar.AppBarActivity
 import com.example.myapplication.bottomsheetdialog.BottomSheetDialogActivity
 import com.example.myapplication.customalertdialog.CustomAlertDialogMainActivity
 import com.example.myapplication.mvvm.ui.auth.LoginActivity
@@ -25,6 +26,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btn_bottom_dialog.setOnClickListener(this)
         btn_mvvm.setOnClickListener(this)
         btn_qr_code.setOnClickListener(this)
+        btn_app_bar.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -58,9 +60,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 val intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)
             }
-            // 구조 - MVVM
+            // 기능 - QR Code
             R.id.btn_qr_code -> {
                 val intent = Intent(this, QRCodeActivity::class.java)
+                startActivity(intent)
+            }
+            // 화면 - app_bar
+            R.id.btn_app_bar -> {
+                val intent = Intent(this, AppBarActivity::class.java)
                 startActivity(intent)
             }
         }

@@ -23,6 +23,7 @@
     <string name="share_product_via">Share Product Via...</string>
     <string name="share">SHARE</string>
     <string name="show_bottom_sheet_dialog">SHOW BOTTOM SHEET DIALOG</string>
+    <string name="demo_text">Demo Text</string>
 
 
 </resources>

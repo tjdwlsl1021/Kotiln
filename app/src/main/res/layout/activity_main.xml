@@ -1,68 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".base.MainActivity">
+    android:orientation="vertical"
+    tools:context=".main.MainActivity">
 
-    <Button
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:id="@+id/btn_navi"
-        android:text="네비게이션"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <Button
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        app:layout_constraintStart_toEndOf="@+id/btn_navi"
-        android:id="@+id/btn_scratch"
-        android:text="스크래치"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <Button
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        app:layout_constraintStart_toEndOf="@+id/btn_scratch"
-        android:id="@+id/btn_dialog"
-        android:text="다이얼로그"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <Button
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        app:layout_constraintStart_toEndOf="@+id/btn_dialog"
-        android:id="@+id/btn_bottom_dialog"
-        android:text="하단 dialog"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <Button
-        app:layout_constraintTop_toBottomOf="@+id/btn_navi"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        app:layout_constraintStart_toStartOf="parent"
-        android:id="@+id/btn_mvvm"
-        android:text="MVVM"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <Button
-        app:layout_constraintTop_toBottomOf="@+id/btn_navi"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        app:layout_constraintStart_toEndOf="@+id/btn_mvvm"
-        android:id="@+id/btn_qr_code"
-        android:text="QR Code"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/btn_navi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="네비게이션" />
+
+        <Button
+            android:id="@+id/btn_scratch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="스크래치" />
+
+        <Button
+            android:id="@+id/btn_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="다이얼로그" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_bottom_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="하단 dialog" />
+
+
+        <Button
+            android:id="@+id/btn_mvvm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MVVM" />
+
+        <Button
+            android:id="@+id/btn_qr_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="QR Code" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_app_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="App Bar" />
+
+    </LinearLayout>
+
+</LinearLayout>
