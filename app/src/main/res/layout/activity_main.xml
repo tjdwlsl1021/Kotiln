@@ -72,6 +72,12 @@
             android:layout_height="wrap_content"
             android:text="App Bar" />
 
+        <Button
+            android:id="@+id/btn_diff_utils"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Diff Utils" />
+
     </LinearLayout>
 
 </LinearLayout>
