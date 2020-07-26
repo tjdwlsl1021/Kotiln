@@ -9,6 +9,7 @@ import com.example.myapplication.appbar.AppBarActivity
 import com.example.myapplication.bottomsheetdialog.BottomSheetDialogActivity
 import com.example.myapplication.customalertdialog.CustomAlertDialogMainActivity
 import com.example.myapplication.diffutils.DiffUtilsActivity
+import com.example.myapplication.groupie.GroupieActivity
 import com.example.myapplication.mvvm.ui.auth.LoginActivity
 import com.example.myapplication.navigation.NaviMainActivity
 import com.example.myapplication.qrcode.QRCodeActivity
@@ -29,6 +30,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btn_qr_code.setOnClickListener(this)
         btn_app_bar.setOnClickListener(this)
         btn_diff_utils.setOnClickListener(this)
+        btn_groupie.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -76,6 +78,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             // 화면 - DiffUtils
             R.id.btn_diff_utils -> {
                 val intent = Intent(this, DiffUtilsActivity::class.java)
+                startActivity(intent)
+            }
+
+            // 화면 - GroupieLibrary RecyclerView
+            R.id.btn_groupie -> {
+                val intent = Intent(this, GroupieActivity::class.java)
                 startActivity(intent)
             }
         }

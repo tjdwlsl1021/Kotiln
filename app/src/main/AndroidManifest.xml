@@ -16,7 +16,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
-        <activity android:name=".diffutils.DiffUtilsActivity"></activity>
+        <activity android:name=".groupie.GroupieActivity"></activity>
+        <activity android:name=".diffutils.DiffUtilsActivity" />
         <activity android:name=".appbar.AppBarActivity" />
         <activity android:name=".qrcode.QRCodeActivity" />
         <activity android:name=".mvvm.ui.home.HomeActivity" />
