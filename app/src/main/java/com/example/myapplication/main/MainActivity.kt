@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.R
+import com.example.myapplication.anim.AnimActivity
 import com.example.myapplication.appbar.AppBarActivity
 import com.example.myapplication.bottomsheetdialog.BottomSheetDialogActivity
 import com.example.myapplication.customalertdialog.CustomAlertDialogMainActivity
@@ -31,6 +32,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btn_app_bar.setOnClickListener(this)
         btn_diff_utils.setOnClickListener(this)
         btn_groupie.setOnClickListener(this)
+        btn_anim.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -84,6 +86,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             // 화면 - GroupieLibrary RecyclerView
             R.id.btn_groupie -> {
                 val intent = Intent(this, GroupieActivity::class.java)
+                startActivity(intent)
+            }
+            // 애니메이션
+            R.id.btn_anim -> {
+                val intent = Intent(this, AnimActivity::class.java)
                 startActivity(intent)
             }
         }
