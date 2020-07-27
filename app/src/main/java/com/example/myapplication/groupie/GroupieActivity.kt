@@ -42,7 +42,7 @@ class GroupieActivity : AppCompatActivity() {
 
         ExpandableGroup(ExpandableHeaderItem("Exciting Group"), false).apply {
             excitingSection.addAll(excitingFancyItems)
-            add(Section(excitingSection))
+            add(excitingSection)
             groupAdapter.add(this)
         }
 
