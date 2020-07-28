@@ -16,7 +16,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
-        <activity android:name=".anim.AnimActivity"></activity>
+        <activity android:name=".intro.IntroActivity"></activity>
+        <activity android:name=".anim.AnimActivity" />
         <activity android:name=".groupie.GroupieActivity" />
         <activity android:name=".diffutils.DiffUtilsActivity" />
         <activity android:name=".appbar.AppBarActivity" />

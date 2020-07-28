@@ -24,6 +24,8 @@
     <string name="share">SHARE</string>
     <string name="show_bottom_sheet_dialog">SHOW BOTTOM SHEET DIALOG</string>
     <string name="demo_text">Demo Text</string>
+    <string name="skip_intro">skip_intro</string>
+    <string name="next">next</string>
 
 
 </resources>
