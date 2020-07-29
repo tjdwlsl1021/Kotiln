@@ -16,6 +16,7 @@ import com.example.myapplication.mvvm.ui.auth.LoginActivity
 import com.example.myapplication.navigation.NaviMainActivity
 import com.example.myapplication.qrcode.QRCodeActivity
 import com.example.myapplication.scratch.ScratchActivity
+import com.example.myapplication.splash.SplashActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -35,6 +36,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btn_groupie.setOnClickListener(this)
         btn_anim.setOnClickListener(this)
         btn_intro.setOnClickListener(this)
+        btn_splash.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -98,6 +100,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             // 화면 - Intro Slider Using ViewPager2
             R.id.btn_intro -> {
                 val intent = Intent(this, IntroActivity::class.java)
+                startActivity(intent)
+            }
+
+            // 화면 - Splash
+            R.id.btn_splash -> {
+                val intent = Intent(this, SplashActivity::class.java)
                 startActivity(intent)
             }
         }

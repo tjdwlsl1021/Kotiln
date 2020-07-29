@@ -104,6 +104,13 @@
             android:layout_height="wrap_content"
             android:text="Intro" />
 
+        <Button
+            android:id="@+id/btn_splash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Splash" />
+
+
     </LinearLayout>
 
 </LinearLayout>
