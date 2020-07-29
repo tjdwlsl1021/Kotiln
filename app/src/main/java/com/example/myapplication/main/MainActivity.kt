@@ -11,6 +11,7 @@ import com.example.myapplication.bottomsheetdialog.BottomSheetDialogActivity
 import com.example.myapplication.customalertdialog.CustomAlertDialogMainActivity
 import com.example.myapplication.diffutils.DiffUtilsActivity
 import com.example.myapplication.groupie.GroupieActivity
+import com.example.myapplication.intro.IntroActivity
 import com.example.myapplication.mvvm.ui.auth.LoginActivity
 import com.example.myapplication.navigation.NaviMainActivity
 import com.example.myapplication.qrcode.QRCodeActivity
@@ -33,6 +34,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btn_diff_utils.setOnClickListener(this)
         btn_groupie.setOnClickListener(this)
         btn_anim.setOnClickListener(this)
+        btn_intro.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -91,6 +93,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             // 애니메이션
             R.id.btn_anim -> {
                 val intent = Intent(this, AnimActivity::class.java)
+                startActivity(intent)
+            }
+            // 화면 - Intro Slider Using ViewPager2
+            R.id.btn_intro -> {
+                val intent = Intent(this, IntroActivity::class.java)
                 startActivity(intent)
             }
         }
