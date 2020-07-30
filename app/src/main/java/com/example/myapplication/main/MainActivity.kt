@@ -14,6 +14,7 @@ import com.example.myapplication.groupie.GroupieActivity
 import com.example.myapplication.intro.IntroActivity
 import com.example.myapplication.mvvm.ui.auth.LoginActivity
 import com.example.myapplication.navigation.NaviMainActivity
+import com.example.myapplication.progressbar.ProgressBarActivity
 import com.example.myapplication.qrcode.QRCodeActivity
 import com.example.myapplication.scratch.ScratchActivity
 import com.example.myapplication.splash.SplashActivity
@@ -37,6 +38,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btn_anim.setOnClickListener(this)
         btn_intro.setOnClickListener(this)
         btn_splash.setOnClickListener(this)
+        btn_progressbar.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -102,10 +104,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 val intent = Intent(this, IntroActivity::class.java)
                 startActivity(intent)
             }
-
             // 화면 - Splash
             R.id.btn_splash -> {
                 val intent = Intent(this, SplashActivity::class.java)
+                startActivity(intent)
+            }
+            // 화면 - ProgressBar
+            R.id.btn_progressbar -> {
+                val intent = Intent(this, ProgressBarActivity::class.java)
                 startActivity(intent)
             }
         }

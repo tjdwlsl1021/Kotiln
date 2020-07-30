@@ -16,11 +16,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
+        <activity android:name=".progressbar.ProgressBarActivity"></activity>
         <activity
             android:name=".splash.SplashActivity"
-            android:theme="@style/Splash">
-
-        </activity>
+            android:theme="@style/Splash"></activity>
         <activity android:name=".intro.IntroActivity" />
         <activity android:name=".anim.AnimActivity" />
         <activity android:name=".groupie.GroupieActivity" />
