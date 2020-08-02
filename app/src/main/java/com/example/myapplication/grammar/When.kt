@@ -1,20 +1,20 @@
 package com.example.myapplication.grammar
 
 fun main() {
-    val time = 14
+    val time = 4
     val isSunday = true
 
 
     val greeting = when {
         isSunday -> "I'm gonna stay in bed all day!"
         time < 5 -> "Why up so early?"
-        in 0..11 -> {
+        time in 0..11 -> {
             "Good morning!"
         }
-        12 -> {
+        time == 12 -> {
             "Time for lunch!"
         }
-        13, 14 -> {
+        time == 13 || time == 14 -> {
             println("Yawn...")
             "Time for a nap!"
         }
