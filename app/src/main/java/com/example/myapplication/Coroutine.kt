@@ -108,5 +108,62 @@ GlobalScope.launch(coroutineContext) {
         showToast(R.string.toast_msg_delete_success)
     }
     refreshUI()
+
+
+    //===AsyncTask
+    class SomethingAsync extends AsyncTask<Void, Integer, Integer> {
+        @Override
+        protected void onPreExecute() {
+            progressBar.setVisibility(View.VISIBLE);
+        }
+        @Override
+        protected Integer doInBackground(Void... voids) {
+
+
+        return value;
+    }
+        @Override
+        protected void onProgressUpdate(Integer ... values) {
+        progressbar.setProgress(values[0].intValue());
+    }
+
+        @Override
+        protected void onPostExecute(Integer result) {
+
+        }
+
+
+    }
+
+
+    // rx
+    Disposable backgroundtask;
+
+    void BackgroundTask (String URLs) {
+//onPreExecute
+
+        progressBar.setVisibility(View.VISIBLE);
+
+        backgroundtask = Observable.fromCallable(() -> {
+//doInBackground
+
+        Document doc = Jsoup . connect (URLs).timeout(3000).get();
+        Elements elements = doc . select ("title");
+        title = elements.get(0).text();
+
+        return false;
+    })
+        .subscribeOn(Schedulers.io())
+        .observeOn(AndroidSchedulers.mainThread())
+        .subscribe((result) -> {
+
+//onPostExecute
+
+        replaceFragment(title);
+        progressBar.setVisibility(View.GONE);
+
+        backgroundtask.dispose();
+    });
+    }
 }
 
