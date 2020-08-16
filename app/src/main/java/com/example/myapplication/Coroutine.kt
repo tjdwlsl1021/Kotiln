@@ -1,5 +1,7 @@
 package com.example.myapplication
 
+import android.view.View
+
 
 // 어싱크 -> 코루틴 변경하기 예제보고 공부
 // 고민고민
@@ -165,5 +167,28 @@ GlobalScope.launch(coroutineContext) {
         backgroundtask.dispose();
     });
     }
+
+
+    //  defer 방식
+    //  Disposable disposable = Observable.defer(() -> { // 백그라운드 동작
+    //  Map<String, Bitmap> bitmapListMap1 = ImageUtils.decodeFile(urlListMap);
+    //  return Observable.just(bitmapListMap1);
+    //  })
+
+    // fromCallable방식
+    val disposable: Disposable = Observable.fromCallable({ ImageUtils.decodeFile(urlListMap) })
+        .subscribeOn(Schedulers.io()) // subscribeOn : Observable을 어느 스레드에서 동작할 것인지 정의
+        .observeOn(AndroidSchedulers.mainThread()) // observeOn() : observer가 어느 스레드에서 동작할 건인지 정의
+        .subscribe({ bitmapListMap ->  // 메인스레드 동작
+
+        },
+            { throwable -> LogHelper.d("HSJ", "error 값 : " + throwable.getMessage()) }
+            ,
+            {
+                LogHelper.d("hsj", "완료") // 자동으로 disposable처리되는지 확인용 주석
+            }
+        )
+
+    compositeDisposable.add(disposable)
 }
 
